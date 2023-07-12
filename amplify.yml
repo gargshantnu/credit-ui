@@ -1,0 +1,24 @@
+# Rewrites and redirect configuration
+# Source address  </^[^.]+$|\.(?!(css|html|gif|ico|jpg|js|png|txt|svg|woff|ttf|map|json)$)([^.]+$)/>
+# Target address  /index.html
+# Type            200 (Rewrite)
+version: 1.0
+frontend:
+    phases:
+        preBuild:
+            commands:
+                - nvm install v18.12.1
+                - nvm use v18.12.1
+                - npm i
+        build:
+            commands:
+                - npm run build
+    artifacts:
+        # build output directory
+        baseDirectory: .next
+        files:
+            - "**/*"
+    cache:
+        paths:
+            - node_modules/**/*
+            # - package-lock.json

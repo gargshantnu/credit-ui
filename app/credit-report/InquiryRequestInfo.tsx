@@ -7,7 +7,7 @@ export default function InquiryRequestInfo(data: Object) {
             <div className={styles.Heading}>
                 InquiryRequestInfo
             </div>
-            <div>
+            <div className={styles.Data}>
                 {JSON.stringify(data)}
             </div>
         </>

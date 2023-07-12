@@ -7,7 +7,7 @@ export default function CCRResponse(data: Object) {
             <div className={styles.Heading}>
                 CCRResponse
             </div>
-            <div>
+            <div className={styles.Data}>
                 {JSON.stringify(data)}
             </div>
         </>

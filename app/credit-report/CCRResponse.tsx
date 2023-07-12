@@ -1,11 +1,10 @@
 import styles from './styles.module.css'
 
 
-export default function CCRResponse() {
+export default function CCRResponse(data:Object) {
     return (
         <div className={styles.Heading}>
-        {/* <div> */}
-            CCRResponse
+            CCRResponse {JSON.stringify(data)}
         </div>
     )
 }

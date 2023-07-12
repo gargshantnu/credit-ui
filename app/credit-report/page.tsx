@@ -5,15 +5,19 @@ import InquiryRequestInfo from "./InquiryRequestInfo";
 import CCRResponse from "./CCRResponse";
 import Score from "./Score";
 
+import styles from './styles.module.css'
+
 
 export default function CreditReport() {
   return (
-    <div >
-      Shantnu  2 {Object.keys(data).join(", ")}
-      <InquiryResponseHeader {...data.InquiryResponseHeader}/>
-      <InquiryRequestInfo {...data.InquiryRequestInfo}/>
-      <CCRResponse {...data.CCRResponse}/>
-      <Score {...data.Score}/>
-    </div>
+    <>
+      <div className={styles.Heading}>
+        Credit report
+      </div>
+      <InquiryResponseHeader {...data.InquiryResponseHeader} />
+      <InquiryRequestInfo {...data.InquiryRequestInfo} />
+      {/* <CCRResponse {...data.CCRResponse}/> */}
+      <Score {...data.Score} />
+    </>
   )
 }
